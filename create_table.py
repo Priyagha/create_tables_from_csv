@@ -6,3 +6,5 @@ import os
 
 # %%
 write_sql = open('create_tables_from_csv.pgsql', 'w')
+
+files = sorted(glob('./*.csv'))
