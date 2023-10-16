@@ -48,3 +48,6 @@ for file in files:
 
     write_sql.write(table_str)
     write_sql.write(csv_str)
+
+
+write_sql.close()
