@@ -41,4 +41,10 @@ for file in files:
     table_str = table_str[:-1]
     table_str += ');\n'
 
-    
+    csv_path = os.path.join(pwd, file.split('\\')[1]).replace('\\','/')
+    csv_str = f"COPY {table_name} FROM '{csv_path}' DELIMITER ',' CSV HEADER;\n\n"
+    print('\t',table_str)
+    print('\t', csv_str)
+
+    write_sql.write(table_str)
+    write_sql.write(csv_str)
